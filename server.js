@@ -45,6 +45,6 @@ app.post("/",function(req,res){
     })
 })
 
-app.listen(3000 , function(){
+app.listen(process.env.Port || 3000 , function(){
     console.log("Succesfully Log in to port 3000.");
 })
