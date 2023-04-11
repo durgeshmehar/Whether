@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature of city</title>
+    <!-- Css of bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+     <!-- Javascript of bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="row align-items-md-stretch">
+        <div class="col-md-12">
+            <div class="h-200 p-5 text-bg-dark">
+                <h2> WHETHER INFORMATION</h2>
+                <h4 style="display: inline">The temperature in  <%= city %>  is  <%= temp %> (degree) with having nature of <%=desc %> .</h4>
+                <img src="<%= urlIcon%>">
+
+                <h5>✔️ Thanks a lot! 🙌 <br>you can now close this window.</h5>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

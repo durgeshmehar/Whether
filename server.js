@@ -26,17 +26,18 @@ app.post("/",function(req,res){
         })
         response.on("data" ,function(){
             const detail = JSON.parse(collect)
+            const city =detail.name;
+            const temp=detail.main.temp;
+            const desc =detail.weather[0].description;
+            const icon =detail.weather[0].icon ;
+            const urlIcon = "https://openweathermap.org/img/wn/"+ icon + "@2x.png"
+
             // console.log(detail);
             // console.log("Temperature(Celsius) :"+detail.main.temp);
             // console.log("Description :"+ detail.weather[0].description);
             // res.sendFile(__dirname+"/index.html");
             // res.render((__dirname+"/index.html"),{result:display});            
-            res.write("<h1>WHETHER INFORMATION</h1>")
-            res.write("<h2>The temperature in "+ detail.name +" is "+ detail.main.temp + " (degree) with having nature of "+ detail.weather[0].description +"</h2>");
-            const icon =detail.weather[0].icon ;
-            const urlIcon = "https://openweathermap.org/img/wn/"+ icon + "@2x.png"
-            res.write("<img src=" +urlIcon + ">");
-            res.send();
+            res.render((__dirname +"/back.html"),{city :city ,temp:temp ,desc:desc,urlIcon:urlIcon}) ;
         })
     })
     .on("error",function(e){
