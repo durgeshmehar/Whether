@@ -7,36 +7,72 @@
     <title>Whether</title>
     <style>
         body{
-            background-color: aquamarine;
+            background-color: rgb(57, 50, 64);
             text-align: center;
             padding:3vw;
             font-size: 2vw;
-            color: rgb(23, 234, 20);
+            color: rgb(171, 209, 229);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        h3{
+        .container{
+            border:2px solid grey;
+            border-radius: 2vw;
             padding:3vw;
-            font-size: 1.8vw;
+        }
+        h1{
+            padding:3vw;
             color:deeppink;
-            border:1vw dashed rgb(0, 247, 255);
+            border:0.5vw dashed rgb(0, 247, 255);
         }
         input{
             padding:0.5vw;
+            margin:2vw;
             font-size: 1vw;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color:rgb(236, 239, 233);
-            background-color: rgb(119, 127, 192);
+            color:rgb(254, 254, 254);
+            border:1px solid #fff;
+            border-radius: 0.2vw;
+            background-color: rgb(97, 107, 114);
+        }
+        input.submit{
+            color:rgb(255, 255, 255);
+            font-size: 1.5vw;
+            font-weight: 800;
+            background-color:#80669d;
+            padding:0.3 1.8vw 0.3 1.8vw;
+            
+
+        }
+        @media only screen and (max-width:850px) {
+           h1{
+            font-size: 5vw;
+           }
+           label{
+            font-size: 4vw;
+           }
+           input{
+            padding: 0.8vw;
+            font-size: 2.5vw;
+           }
+           input.submit{
+            padding:1vw;
+            font-size: 2.5vw;
+           }
+        
         }
         
     </style>
 </head>
 <body>
-   <h1>Whether information</h1>
-   <form action="/" method="post">
-      <label for="">Enter City :</label> 
-     <input type="text" name="loc">
-     <br>
-     <input type="submit">
-   </form>
+    <div class="container">
+
+        <h1>Whether Information</h1>
+        <form action="/" method="post">
+            <label for="">Enter City :</label> 
+            <input type="text" name="loc">
+            <br>
+            <input type="submit" class="submit">
+        </form>
+    </div>
 </body>
 </html>
